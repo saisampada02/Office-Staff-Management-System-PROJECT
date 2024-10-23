@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <?php include 'includes/header.php'; ?>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('address')">Address</div>
+            <div class="tab" onclick="showTab('contact-info')">Contact Information</div>
+        </div>
+        <div id="address" class="tab-content active">
+            <h3>OUR LOCATION</h3>
+            <div id="map">
+                <!-- Embedded Google Maps -->
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                src="https://maps.google.com/maps?q=Your%20Location&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+            </div>
+            <div id="complete-address">
+                <h3>ADDRESS</h3>
+                <p><strong>Company Name:</strong>SyncWave Info Tech</p>
+                <p><strong>Street Name:</strong>2134 pine street</p>
+                <p><strong>City:</strong>Banjara Hills,Hyderabad</p>
+                <p><strong>State:</strong>Telangana</p>
+                <p><strong>Pin Code:</strong>500034</p>
+                <p><strong>Country:</strong>India</p>
+
+
+                <p><strong>Phone No:</strong>8676345662</p>
+                <p><strong>Email:</strong>SyncWave@gmail.com</p>
+            </div>
+        </div>
+        <div id="contact-info" class="tab-content">
+            <h3>CONTACT INFORMATION</h3>
+            <div class="admin-info">
+                <img src="admin.jpg" alt="Admin Image">
+                <div>
+                    <p><strong>Name:</strong> Jane smith</p>
+                    <p><strong>Email:</strong> jane.smith@gmail.com</p>
+                    <p><strong>Phone:</strong> +1234567890</p>
+                    <p><strong>About:</strong> Jane smith is a seasoned marketing professional with over 10 years of experience in digital marketing and brand management. She holds a Bachelor's degree in Marketing from XYZ University and has worked with several high-profile clients in the tech and retail industries.</p>
+                    <p><strong>Office Hours:</strong> Mon - Fri, 9 AM - 5 PM</p>
+                    <p><strong>Fax:</strong> +1234567891</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <?php include 'includes/footer.php'; ?>
+    </footer>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

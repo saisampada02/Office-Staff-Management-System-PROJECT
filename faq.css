@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background1.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+}
+
+header {
+    background-color: #ff7200; /* Muted blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-box {
+    background-color: black; /* White background for each box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    box-shadow: 0 0  rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 700px; /* Adjust the maximum width as per your requirement */
+    margin: auto;
+}
+
+.general-questions {
+    max-width: 200px; /* Adjust the maximum width for the General Questions box */
+    
+}
+
+
+.faq-section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:white; /* Dark gray for section titles */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.faq-list {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.faq-question {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.faq-answer {
+    display: none; /* Hide answers by default */
+    margin-bottom: 15px;
+}
